@@ -28,16 +28,16 @@
         <div class='row mt-5'>
             <div class='container w-75'>
                 <?php
-                echo ("<div class='col text-center'>");
-                echo ("<p class='font-weight-bold text-uppercase'>" . $matriz_noticias[$noticia][1] . "</p>");
-                echo ("<img class='img-thumbnail' src='" . $matriz_noticias[$noticia][3] . "' alt='Foto da Notícia'/>");
-                echo ("<p class='text-justify mt-2'>" . $matriz_noticias[$noticia][2] . "</p");
-                echo ("</div>");
+                echo ("<div class='col text-center'>
+                <p class='font-weight-bold text-uppercase'>" . $matriz_noticias[$noticia][1] . "</p>
+                <img class='img-thumbnail' src='" . $matriz_noticias[$noticia][3] . "' alt='Foto da Notícia'/>
+                <p class='text-justify mt-2'>" . $matriz_noticias[$noticia][2] . "</p
+                </div>");
                 ?>
             </div>
-            <button class="btn btn-light btn-sm mb-2 mx-3" onclick="history.go(-1)">Voltar</button>
         </div>
     </div>
+    <button class="btn btn-light btn-sm mb-2 mx-2" onclick="history.go(-1)">Voltar</button>
 </body>
 
 </html>

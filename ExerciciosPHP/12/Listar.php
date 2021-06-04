@@ -25,20 +25,22 @@
         include "Matriz_Noticias.inc";
         ?>
         <h1 class="p-2 bg-info text-white text-center">Notícias sobre Tecnologia -<span class="text-warning"> <?= $noticia ?></span></h1>
-        <div class='row'>
-            <?php
-            for ($i = 0; $i < count($matriz_noticias); $i++) {
-                if ($noticia == $matriz_noticias[$i][0]) {
-                    echo ("<div class='col text-center'>");
-                    echo ("<p class='font-weight-bold text-primary mt-2'><a href='detalhes.php?paginaListar=$i'>" . $matriz_noticias[$i][1] . "'</a></p>");
-                    echo ("<img class='img-thumbnail' src='" . $matriz_noticias[$i][3] . "' alt='Foto da Notícia' />");
-                    echo ("<p class='text-justify mt-2 p-1'>" . $matriz_noticias[$i][2] . "</p>");
-                    echo ("</div>");
+        <div class="container">
+            <div class='row'>
+                <?php
+                for ($i = 0; $i < count($matriz_noticias); $i++) {
+                    if ($noticia == $matriz_noticias[$i][0]) {
+                        echo ("<div class='col text-center'>
+                    <p class='font-weight-bold text-primary mt-2'><a href='detalhes.php?paginaListar=$i'>" . $matriz_noticias[$i][1] . "'</a></p>
+                    <img class='img-thumbnail' src='" . $matriz_noticias[$i][3] . "' alt='Foto da Notícia' />
+                    <p class='text-justify mt-2 p-1'>" . $matriz_noticias[$i][2] . "</p>
+                    </div>");
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
-        <button class="btn btn-light btn-sm mt-2 mx-1" onclick="history.go(-1)">Voltar</button>
+        <button class="btn btn-light btn-sm mb-2 mx-3" onclick="history.go(-1)">Voltar</button>
     </div>
 </body>
 
